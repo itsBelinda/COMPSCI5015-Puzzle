@@ -1,0 +1,24 @@
+Branistorm Ideas mHCI:
+
+- RFID / QR Codes in interesting places
+- each RFID gives information about attration
+- Riddles lead to another places
+- user can choose which riddle to solve (the result of the riddle will be a place and will be guided in the direction of that place with another riddle.
+	--> "Consider the attention demands of your interactions": looking for the clue IRL instead of on the phone
+
+
+- use AR-tags
+	- show a mascot
+	- explain about attractions in a more "fun" way
+
+- "data" presented offline (or only when ar-tag is scanned), not to cause problems with walking people staring at their phones
+
+
+"The University has also requested you to consider designing an experience that can be enjoyed by a group
+of students, rather than having them focus attention on their own devices and ending up “alone together”"
+	- two AR-tags make only sense together. They are too far apart so one person cannot scan both at the same time (and would need two phones), but close enough that two people can still talk together (more thant 2)
+	- Escape room style: do stuff in a certain order to succeed
+	- tag scanning leads to a new tag - scan again (how to incorporate that it's possible to also do it alone?)
+
+
+Todo: look at other apps, see what can be improved
