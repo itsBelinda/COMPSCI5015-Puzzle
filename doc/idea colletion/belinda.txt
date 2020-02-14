@@ -15,10 +15,70 @@ Branistorm Ideas mHCI:
 
 
 "The University has also requested you to consider designing an experience that can be enjoyed by a group
-of students, rather than having them focus attention on their own devices and ending up ìalone togetherî"
+of students, rather than having them focus attention on their own devices and ending up ‚Äúalone together‚Äù"
 	- two AR-tags make only sense together. They are too far apart so one person cannot scan both at the same time (and would need two phones), but close enough that two people can still talk together (more thant 2)
 	- Escape room style: do stuff in a certain order to succeed
 	- tag scanning leads to a new tag - scan again (how to incorporate that it's possible to also do it alone?)
 
 
 Todo: look at other apps, see what can be improved
+
+
+-----------
+Meeting 2:
+
+The app is a gamified campus discovery app that presents a set of locations that can/should be visited in order for a student to "graduate".
+
+Target audience: Freshers/Refreshers - students new to the campus
+ - But staff and existing students can also use it, as the secondary demographic
+ - Use GUID to create an account
+
+Goal of the game:
+ - To gain enough experience points to complete the game.
+
+What is a checkpoint:
+ - fundamental academic locations on campus
+ 
+How is a checkpoint achieved:
+ - by physically visiting a location
+ - technology: AR tags to scan with phone
+
+How is the goal achieved:
+
+At a checkpoint you are presented with options, which after choosing give you a specific riddle to your direction
+
+Start the game with a quiz to determine the "starting point of journey"
+ - input your department, which gives you certain checkpoints
+ - "personality" test determines your RPG skills
+ - likely all users start at the same point (registration/picking up card)
+ 
+Every riddle is similar to old text-based adventure games
+ - options you can choose from
+ - if you go to lectures, you get information
+ - if you go to lab, solve puzzles
+ - if you socialise, you get a networking score boost
+
+A riddle is an abstraction of a prompt.
+A riddle guides you to a location without specifically telling you where to go.
+A riddle is solved when you arrive at a location - bonus for arriving at the CORRECT location.
+
+If you're stuck at a riddle, you can use hints - the last hint used up gives you a gps coordinate on a google map.
+The rewards are XP points.
+Hints are multipliers - every time you use a hint you reduce the multiplier.
+
+Experience correlates to virtual "grade" levels.
+Experience also correlates to the amount of IRL investigation done.
+At certain experience levels you unlock locations, then freebies.
+
+The levels 1-4th year are standard progression (basic level tops out at 4th year)
+MSc and upwards are higher xp points - better solve rate in riddles.
+The more points you get/Higher XP level, the more freebies you get.
+
+Completed the game if you met all the checkpoints and completed all riddles.
+
+No replay value.
+
+Game is finished if we visit all locations.
+
+Next meet Monday 3pm
+
