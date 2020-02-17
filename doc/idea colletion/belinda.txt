@@ -82,3 +82,14 @@ Game is finished if we visit all locations.
 
 Next meet Monday 3pm
 
+-------------------------------
+Monday 17/02
+
+Non-linearity: avoiding the use of pre-defined routes and directions
+Accomplished: by presenting choices at each checkpoint, and not giving specific directions but rather cryptic clues/puzzles. Also, these puzzles have no one right answer, but rather many.
+
+Use exploration algorithm to choose locations, visit history defines likelyhood of next location
+
+
+
+
