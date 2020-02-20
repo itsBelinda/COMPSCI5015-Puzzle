@@ -25,18 +25,19 @@ Ideas (Design/input methods):
   - overlay of buttons
   - buttons always visible
   - speach input
-  -  
+  - swipe between the riddles
+  - shaking the phone selects a random option
   
 - riddle screen  
   - only AR (exocentrically placed on campus)
   - AR heads-up
   - speach output (maybe even in gaelic and people have to find someone to translate it for them)
   - show it on screen as text
-  
-
 
 - solution screen 
-
+  - popup
+  - overlay
+  - animation change in AR
 
 how to trigger a riddle:
   - select a button on screen
@@ -47,4 +48,5 @@ how to solve a riddle
   - scan an RFID tag
   - sanc a QR code or AR tag  
   - arriving at a destination (coordinates)
-  - 
+  - camera button either at the bottom visible, or swipe up and invisible, or RFID triggers it
+  
