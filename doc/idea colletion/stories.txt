@@ -1,0 +1,14 @@
+
+Story 1:
+Alan is a new student at UofG in the week just before freshers in autumn 2020. He downloads the app <insert app name>.
+- Alan creates an account using an e-mail address and choosing a password. This can be his private e-mail or student e-mail.
+- Alan has to answer a short multiple-choice quiz that will determine his primary interests. 
+- Once the quiz is completed, a map is shown. 
+- Alan selects to scan an AR code that was given to him with his welcome package from the UofG. He gets a voucher for a free drink at the Fraser building. 
+- Because Alan is not thirsty, he decides to go to his first in-game lecture. He is shown his first riddle. <Enter riddle text/image/speach/....>
+- The riddle guides Alan to the teaching office (dependant of his expected field of study) because he does not have any classes enrolled. 
+- Unfortunately, Alan cannot find the right place. He scans another code (tbd: AR, QR, RFID) that he randomly finds on campus. It is from a landmark. He gets backgroud information on that landmark.
+- Because Alan is now thirsty, he decides to go to the Fraser building after all and get his free drink. He shows the lady behind the till a QR code that gives him a free drink. 
+- At the Fraser building he meets other students. They add each other as friends in the app. 
+- One of them has the same school as Alan and has not been to the teaching office either. He has done some social riddles, but none of the study ones. However, he knows where the teaching office is. 
+- Together they find the teaching office and both get rewarded for completing this task.
