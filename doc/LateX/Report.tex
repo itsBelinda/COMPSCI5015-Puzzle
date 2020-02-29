@@ -30,9 +30,54 @@ This is the template for the MHCI coursework report.
 
 
 % ------------------------------------
-\section*{Understanding The Requirements}
+\section*{Purpose}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The main purpose of the product is to create an interactive, gamified mobile application for the discovery of the University campus that helps students and staff learn more about the University in an individual or group setting. It is developed to promote discovering the whole of the university in choosable paths and speeds,  and to encourage social activities as opposed to lone solutions. It is to be available for any current or prospective student and staff - all registered at the university with a GUID - , but the main target demographic are new students.\\
+The system is based on a remote database which stores the details of the locations and users, and this data is served to the user in the form of a mobile device application, as this provides the best user experience (UX).
+
+% ------------------------------------
+\section*{System Description}
+
+\subsection*{Functionality}
+Users can access the app by creating an account using their university email (specifically, GUID). The app allows for not only the creation of the account, but the maintenance (forgotten password, change details, etc.), and deletion of it. Users have to fill out a personality quiz, the answers of which will later on bias the likelyhood of what location a user will most likely get offered to head to next. The app will make it possible to read an interactive checkpoint, e.g. AR tag, which would prompt a riddle to the user that they need to solve. In the possibility of the puzzle being too hard to decipher, there are 3 hints available for each, which make the puzzle gradually easier to solve. The app will also allow for users to increase their in-game experience by correctly solving riddles, and use the experience to level up and gain rewards by doing well in the app. The system also allows for and promotes social interactions between users, to work together to a shared goal of successfully solving a riddle.\\
+Aspects that entertain and engage the user include the riddles/puzzles, AR and the checkpoints, achievements and online character development, friend connections and gifting, freebies and rewards to gain, and the learning of insider information about the campus.
+
+\subsection*{User characteristics and needs}
+The goals of the users would be to visit as many locations on campus as possible, and do it in the most efficient way gaining the most bonus from solving riddles correctly. This would give them increased chances to gain freebies, level up and develop their level of experience, which would keep them captivated, entertained and interested. New students and faculty would use the app to get more information about the campus, while existing university members would use the app to either learn about the university with a delay, or to put their existing knowledge to use to gain as many points as possible and get the rewards.\\
+The main motivation, however, of any type of user is likely to be the love of mysteries, problem solving, and the possibility to pass the time in a fun way and interact with peers with a more relaxed environment than social media. In the case of any users, however, it can be assumed that they have a busy lifestyle and therefore the app is a series of short tasks without expiry dates, which can fit around any student/staff member's schedule.
+
+\subsection*{Constraints}
+The two biggest constraints to the operations of the app are the user's device capabilities, and the reliability of internet connectivity. These are both aspects the app needs to be designed for, to minimise the disruption these constraints would mean. Since users can walk freely around campus, gepgraphical and physical obstacles do not represent significant constraints.
+
+\subsection*{Assumptions and dependencies}
+The system and its operations can be affected by many external entities. This includes user device capabilities, the weather (if used when walking), developments in AR/MR technology, University redevelopment (buildings built/torn down, rooms made available/unavailable), and the user leaving the university having not completed the game yet.
+
+\section*{Requirements}
+
+\subsection*{Functional requirements}
+The following are the main functional requirements the system has to fit:
+\begin{itemize}
+  \item The system needs to scan the AR tag/QR code/etc.
+  \item The system needs to randomly choose a building/riddle based on category
+  \item The system needs to register category chosen
+  \item The system needs to register personality test results
+  \item The system needs to respond randomly with bias from personality test
+  \item The system needs to register the riddle being solved/not solved
+  \item The system needs to update user profile based on solved/not solved riddle
+  \item The system needs to update user profile in relation to freebies, levels, achievements
+  \item The system needs to handle account creation and logins
+  \item The system needs to communicate with a database to store all data
+  \item The system needs to communicate online
+\end{itemize}
+
+\subsection*{Non-functional requirements}
+Non-functional requirements may not relate directly to the system's operations, but are equally important to consider for a good UX. It has been shown loading times affect the number of users retained by a service[https://developers.google.com/web/fundamentals/performance/why-performance-matters]. Therefore the following performance limits were set for the app, speedwise: the system should login in <5s, recognise tags in <5s, and complete the initialisation (show splash screen) in <20s.\\
+It is also key to calculate for errors that might happen. To ensure users are never left in the dark, in case an unexpected issue were to happen, the system must show an error page with a clear message on what has happened, and what should be done by the user to mitigate it (e.g. "Uh-oh, something puzzled our app! Please leave feedback here <link>!".
+\subsection*{Safety and Security}
+While the design of the app focuses on most interactions happening when the user is stationary by a checkpoint, it allows for it to be used when the user is mobile (check map, friends status, etc.). To ensure the safety of the users, the app therefore does not require to be constantly watched. This is complemented by the non-linearity of the application, as the user can choose their own path, and therefore can avoid unsafe areas. The system also needs to be protected to avoid the loss of data, therefore the remote database requires regular backups - this can be supported by the user data being stored on the device locally.
+\subsection*{Quality, maintainability and availability}
+The quality of the product is the final aspect focused on. It was determined that not only the database and the app should be available at all times, but the checkpoints, too. These naturally vary based on building opening times, but the app has to provide satisfactory information on when checkpoints may not be available. The system also needs to correctly relay and register checkpoint location information, as well as be easily adjustable and maintainable for the adding and removal of checkpoints. 
+
 
 
 % ------------------------------------
@@ -41,21 +86,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 % ------------------------------------
 \section*{Initial Prototyping}
-Once the inital design ideas were agreed upon, the ideas can then be represented as paper prototypes. Each team member is reponsible with designing their own prototype that represents the previously agreed design choices.
-
-Each team member presented their paper prototypes to the other team members. The paper prototypes were based on an imaginary story of a user on the app. The prototypes were evaluated based on several criteria that determines the usability of the app.
-
-Every team member had decided that the map should be the main focus of the screen. The user should always be able to see where they are in location to a map screen. If other screens were needed to convey information, the user should always be able to easily return to the base map screen.
-
-Swipe motions that were near the edges of the screen were avoided. This is because new smart phones use gesture based navigation. Users would accidentally use the gesture based navigation of their smart phone instead of the application.
-
-A large goal of the application was to not discourage users from continuing to use the app. If the user had went to the wrong location, they should still be rewarded for exploring, but informed that they have reached the wrong destination.
-
-The application should encourage individual users to use the application with their friends. Several features to encourage this include the ability to add friends via a QR code. Riddles can be included that require the QR code of another user to be scanned. Random gifts could be given that can only be sent to friends.
-
-It is important that the user is not frustrated when they are unable to solve a riddle and can not get stuck in the same position. Ideas to counteract this include: providing various different riddles that can be swapped between at the same time; providing hints to the user that will eventually give the direct path to the intended destination and providing the user with the ability to scan AR codes without knowing the associated riddle (incase they accidentally scan the wrong code). Additionally, if the user does scan the wrong associated code, they should be given the option to 'cancel' their decision so that they can try to find the right code again.
-
-
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 % ------------------------------------
@@ -67,10 +98,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-% ------------------------------------
-\section*{Appendices}
 
-% ------------------------------------
-\section*{References}
 
 \end{document}
