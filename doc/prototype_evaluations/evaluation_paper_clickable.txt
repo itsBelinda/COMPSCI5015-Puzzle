@@ -1,0 +1,44 @@
+
+Person 1 (Belinda 1):
+- finds Profile
+- likes that they have friends
+- wants to see more about friends
+- Navigations offer: wants to click instead of swipe (aiming for the arrows)
+- "back" to map on the top
+- wants to scroll on the map
+- does not want to click twice to get from information about one building to the next one.
+- would like to have more information about a building when clicking on it
+- Where are the loos in the reading room? 
+- Where are the waterfountains?
+- Hint is discovered by accident (add additional "are you sure")
+- really likes the "hand drawn" style
+
+Person 2 (Belinda 2):
+- Has problems signing in (doesn't recoginse submit as a button)
+- All bottom icons are identified immediately
+- tries to click menu (not existant)
+- Doesn't immediately know what to do with the riddle
+- Doesn't get that the riddle can be swiped up. (exit when clicking outside)
+- Also wants to click to get to next offer instead of swipe. 
+- What should I scan? 
+- Likes the information shown when clicking on the stars
+- Does not find hint (add note, "scroll down to reveal hint")
+
+Person 3 (Shaun 1):
+- It's not obvious that the map button is the current screen
+- Wishes for animations to get from one screen to another
+- Not obvious that the AR-question mark needs to be clicked (indication needed)
+- Claimed reward: did not click on button but just anywhere on the screen to get back (good)
+- Navigations to other offers: does not swipe but click. (is not implemented)
+- Want's to click on badges
+- Thinks that the app is too much about the social aspect.
+- DID NOT FIND RIDDLE!! 
+- does not like the "hand drawn" style at all 
+
+Person 4 (Shaun 2): (this person does not look like they are using the app for the first time :) )
+- Immediately clicks on lab to get the first riddle
+- swipe riddle away action immediately discovered
+- tries to move map
+- offers: swiping to get to next offer discovered.
+- badges: tries to swipe
+- would like to get the riddle to show up when a new building is discovered
