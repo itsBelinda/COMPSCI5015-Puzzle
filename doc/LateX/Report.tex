@@ -1,9 +1,13 @@
-\documentclass[a4,10pt,twocolumn]{article}
+\documentclass[10pt,twocolumn]{article} % removed a4 option (is default)
 
 \usepackage[margin=1.5cm]{geometry}
+\usepackage{nameref}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{xurl}
+\usepackage{todonotes}
 
 % Set heading spacings, please don't change this
 \titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
@@ -56,7 +60,7 @@ The system and its operations can be affected by many external entities. This in
 
 \subsection*{Functional requirements}
 The following are the main functional requirements the system has to fit:
-\begin{itemize}
+\begin{itemize}[noitemsep]
   \item The system needs to scan the AR tag/QR code/etc.
   \item The system needs to randomly choose a building/riddle based on category
   \item The system needs to register category chosen
@@ -71,7 +75,7 @@ The following are the main functional requirements the system has to fit:
 \end{itemize}
 
 \subsection*{Non-functional requirements}
-Non-functional requirements may not relate directly to the system's operations, but are equally important to consider for a good UX. It has been shown loading times affect the number of users retained by a service[https://developers.google.com/web/fundamentals/performance/why-performance-matters]. Therefore the following performance limits were set for the app, speedwise: the system should login in <5s, recognise tags in <5s, and complete the initialisation (show splash screen) in <20s.\\
+Non-functional requirements may not relate directly to the system's operations, but are equally important to consider for a good UX. It has been shown loading times affect the number of users retained by a service\footnote{\url{https://developers.google.com/web/fundamentals/performance/why-performance-matters}}. Therefore the following performance limits were set for the app, speedwise: the system should login in <5s, recognise tags in <5s, and complete the initialisation (show splash screen) in <20s.\\
 It is also key to calculate for errors that might happen. To ensure users are never left in the dark, in case an unexpected issue were to happen, the system must show an error page with a clear message on what has happened, and what should be done by the user to mitigate it (e.g. "Uh-oh, something puzzled our app! Please leave feedback here <link>!".
 \subsection*{Safety and Security}
 While the design of the app focuses on most interactions happening when the user is stationary by a checkpoint, it allows for it to be used when the user is mobile (check map, friends status, etc.). To ensure the safety of the users, the app therefore does not require to be constantly watched. This is complemented by the non-linearity of the application, as the user can choose their own path, and therefore can avoid unsafe areas. The system also needs to be protected to avoid the loss of data, therefore the remote database requires regular backups - this can be supported by the user data being stored on the device locally.
@@ -85,11 +89,11 @@ The quality of the product is the final aspect focused on. It was determined tha
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 % ------------------------------------
-\section*{Initial Prototyping}
+\section*{Initial Prototyping} \todo{We only did paper prototypes in this stage, I would suggest to rename this section "Paper Prototyping and remove the next subsection header.}
 \subsection*{Paper Prototypes}
-Once the inital design ideas were agreed upon, the ideas can then be represented as paper prototypes. Each team member is reponsible with designing their own prototype that represents the previously agreed design choices.
+Once the inital design ideas were agreed upon, the ideas can then be represented as paper prototypes. Each team member is reponsible with designing their own interaction prototypes that represents the previously agreed design choices.
 
-Each team member presented their paper prototypes to the other team members. The paper prototypes were based on an imaginary story of a user on the app. The prototypes were evaluated based on several criteria that determines the usability of the app. These prototypes are all available for reference in Appendix A.
+Each team member presented their paper prototypes to the other team members. The paper prototypes were based on an imaginary story of a user on the app. The prototypes were evaluated based on several criteria \todo{what criteria? specify, otherwise delete} that determines the usability of the app. These prototypes are all available for reference in Appendix A.
 
 \subsection*{Prototype 1 (bens)}
 The first prototype generated focusses on maintaining the map as the center of the user's view. The map will almost always be visible regardless of what the user wishes to do. The main interactive elements of the screen are located at the bottom of the screen. The only exception of this rule is that the settings button will be located at the top-left side of the screen.
@@ -141,36 +145,59 @@ The profile can be accessed through the settings menu. This profile will display
 \subsubsection*{Negatives}
 
 \subsection*{Prototype 5(belinda)}
-The final prototype suggested had a similar structure to the previous prototypes. A minimilistic design was implemented for the initial use of the app. The user would be greeted with two buttons; one to sign up and one to log in. When the user has signed in for the first time they will be greeted with a quiz.
+
+The final prototype suggested had a similar structure to the previous prototypes. A minimalistic design was implemented for the initial use of the app. The user would be greeted with two buttons; one to sign up and one to log in. When the user has signed in for the first time they will be greeted with a quiz.
 
 After they complete this quiz, they will be greeted with the main view of the app. This consists of a main map view with several buttons at the top and bottom of the screen. The buttons at the top of the screen will give the user the option to select a lab, lecture or social based riddle. The user will not be limited to one riddle at a time to allow them to revisit riddles that they can not currently solve. The key points will be highlighted on the map as starts.
 
 The bottom part of the screen will swipe up to reveal a navigation drawer. This drawer will contain buttons that can be used to navigate to the other parts of the application. For example, a hints button will give them tips for the current riddle. A camera button will be visible which allows the user to scan an AR code. This AR code will signify the user completing the riddle. Additionally, if the user scans an incorrect AR code, they will be given the option to claim the reward anyway or leave and come back. Another button could be visible which shows the user their currently available offers. The user will also be able to access their profile from this navigation bar. Their profile will show their name, icon and their current skill levels.
 \subsubsection*{Positives}
 \subsubsection*{Negatives}
+
+\todo{write up general learnings rather than for every single prototype. might be simpler. (careful to not include things that are written below}
+
 % ------------------------------------
 \section*{Refined Prototyping}
 
-Once the initial prototypes have been evaluated, a refined prototype is generated. Feedback was taken from the initial prototypes and a final version was created that combines the best parts of all of the previous prototypes.
+Feedback was evaluated from the initial prototypes and a final version was created that combines the best parts of all of the previous prototypes.
+As a base, the prototype \#5 was used, but updated with the learnings from all previous prototypes. 
 
-\subsection*{General Interactions}
+\subsection*{General Interactions} \todo{not sure if this belongs here, we discussed all this in the earlier stage, maybe add it to the conclusions of intitial prototyping?}
 When the application opens, it should show a splash screen. Various interactions were suggested such as a screen that requires a button or finger press to go away. It was decided, however, that a splash screen should be shown that disappears after a few seconds. This allows the user to see that they have entered the right application, but not intrude the users view of the app.
 
 When the application has started, the user will be presented with a login screen. This screen will have a button to log-in to an existing user account or sign-up with a new account. This screen should remain fairly simple, with perhaps only the logo of the application and the application name in addition to this.
 
-Every team member had decided that the map should be the main focus of the screen. The user should always be able to see where they are in location to a map screen. If other screens were needed to convey information, the user should always be able to easily return to the base map screen.
+The map should be the main focus of the screen. The user should always be able to see where they are in location to a map screen. If other screens were needed to convey information, the user should always be able to easily return to the base map screen.
 
 Swipe motions that were near the edges of the screen were avoided. This is because new smart phones use gesture based navigation. Users would accidentally use the gesture based navigation of their smart phone instead of the application.
 
-A large goal of the application was to not discourage users from continuing to use the app. If the user had went to the wrong location, they should still be rewarded for exploring, but informed that they have reached the wrong destination.
+A overall goal of the application is to not discourage users from continuing to use the app. If the user had went to the wrong location, they should still be rewarded for exploring, but informed that they have reached the wrong destination.
 
 The application should encourage individual users to use the application with their friends. Several features to encourage this include the ability to add friends via a QR code. Riddles can be included that require the QR code of another user to be scanned. Random gifts could be given that can only be sent to friends.
 
 It is important that the user is not frustrated when they are unable to solve a riddle and can not get stuck in the same position. Ideas to counteract this include: providing various different riddles that can be swapped between at the same time; providing hints to the user that will eventually give the direct path to the intended destination and providing the user with the ability to scan AR codes without knowing the associated riddle (incase they accidentally scan the wrong code). Additionally, if the user does scan the wrong associated code, they should be given the option to 'cancel' their decision so that they can try to find the right code again.
 
+\subsection*{Changes from Previous Prototyping Stage}
+Following are the main changes that were made to the last prototype (\#5): \\
+
+The buttons for general interaction are kept on the bottom, but stationary. They are arranged so the camera icon is more in the middle and the profile is last. As a first icon, a home screen icon (map) is added. Additionally, an offers button (the gift) is added. \\
+
+On the top of the screen, the different riddle icons are shown next to the classic menu icon (burger menu). The riddles are displayed as a scroll that can be rolled up (swiped) or down to hide or display hints. Hints are displayed in text format; no arrows or direct navigation is shown.\\
+Points of interest are highlighted on the map. They can be clicked, which will then display more information about the places.\\
+
+
+\subsection*{Implementation and Evaluation Clickable Prototype}
+This prototype was drawn up again and made interactive with the Marvel App. It which has very similar features as Invision, which was introduced in the lectures. The advantage of Marvel is that it allows an unlimited number of prototypes in the free version. Both programs allow the designer to implement interactions on drawings that can be made directly in the program or on pictures. The later was used.
+
+This clickable prototype was then sent to various testers through a link. They were then able to click through the displayed webpage like an app. Every tester was briefed initially about the general concept of the app and subsequently filmed while they were interacting with it. They were asked to comment on what they are seeing and doing and the designer who was filming this process gave them pointers on what to do or helped them if they got stuck, especially if that was due to limitations of the clickable prototype.
+
+
 \subsection*{User Testing}
 
-Once each team member had presented their paper prototypes, the best paper prototype was used to create an initial prototype of the application. This prototype was used as a basis for testing the applications interations with normal users. Different users were asked to test this application's interactions and were asked to provide feedback as to the usability of the app.
+\todo{Belinda}
+\subsection*{Implications for Next Stage}
+
+\todo{Belinda}
 % ------------------------------------
 \section*{Demonstrator Prototype}
 
