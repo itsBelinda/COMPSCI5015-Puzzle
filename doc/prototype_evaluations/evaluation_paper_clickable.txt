@@ -15,7 +15,7 @@ Person 1 (Belinda 1):
 
 Person 2 (Belinda 2):
 - Has problems signing in (doesn't recoginse submit as a button)
-- All bottom icons are identified immediately
+- All bottom icons are immediately correctly   identified 
 - tries to click menu (not existant)
 - Doesn't immediately know what to do with the riddle
 - Doesn't get that the riddle can be swiped up. (exit when clicking outside)
@@ -57,7 +57,7 @@ Person 5 (Dan 1):
 Person 6 (Dan 2):
 - phone screen is too small for height of the app (causes interaction problems)
 - can hide riddle even though it's difficult with the phone
-- finds badges, but they are ab it too hidden for them
+- finds badges, but they are a bit too hidden for them
 - suggests button for badges
 - wants to be able to scroll the map
 - finds points of interrest
