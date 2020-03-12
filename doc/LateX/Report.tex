@@ -168,13 +168,8 @@ Each of these paper prototypes were evaluated within the team. These ideas were 
   \item Do not create too many layers of sub-menus that would cause the user to get "lost"
 \end{itemize}
 
-% ------------------------------------
-\section*{Refined Prototyping}
-
-Feedback was evaluated from the initial prototypes and a final version was created that combines the best parts of all of the previous prototypes.
-As a base, the prototype \#5 was used, but updated with the learnings from all previous prototypes. 
-
-\subsection*{General Interactions} \todo{not sure if this belongs here, we discussed all this in the earlier stage, maybe add it to the conclusions of intitial prototyping?}
+\subsection*{Design Definitions for Refined Prototype} 
+\todo{belinda changed the title and switched it to the previous chapter. maybe this should be shortened a bit? }
 When the application opens, it should show a splash screen. Various interactions were suggested such as a screen that requires a button or finger press to go away. It was decided, however, that a splash screen should be shown that disappears after a few seconds. This allows the user to see that they have entered the right application, but not intrude the users view of the app.
 
 When the application has started, the user will be presented with a login screen. This screen will have a button to log-in to an existing user account or sign-up with a new account. This screen should remain fairly simple, with perhaps only the logo of the application and the application name in addition to this.
@@ -189,24 +184,47 @@ The application should encourage individual users to use the application with th
 
 It is important that the user is not frustrated when they are unable to solve a riddle and can not get stuck in the same position. Ideas to counteract this include: providing various different riddles that can be swapped between at the same time; providing hints to the user that will eventually give the direct path to the intended destination and providing the user with the ability to scan AR codes without knowing the associated riddle (incase they accidentally scan the wrong code). Additionally, if the user does scan the wrong associated code, they should be given the option to 'cancel' their decision so that they can try to find the right code again.
 
+% ------------------------------------
+\section*{Refined Prototyping}
+
+Feedback was evaluated from the initial prototypes and a final version was created that combines the best parts of all of the previous prototypes.
+As a base, the prototype \#5 was used, but updated with the learnings from all previous prototypes as described above. 
+
+
 \subsection*{Changes from Previous Prototyping Stage}
 Following are the main changes that were made to the last prototype (\#5): 
 
-The buttons for general interaction are kept on the bottom, but stationary. They are arranged so the camera icon is towards the middle and the profile is all the way to the right (the least important). As a first icon, a home screen icon (map) is added. Additionally, an offers button (the gift) is added. 
-
-On the top of the screen, the different riddle icons are shown next to the classic menu icon (burger menu). The riddles are displayed as a scroll that can be rolled up (swiped) or down to hide or display hints. Hints are displayed in text format; no arrows or direct navigation is shown.
+The buttons for general interaction are kept on the bottom, but stationary. They are arranged so the camera icon is towards the middle and the profile is all the way to the right (the least important). As a first icon, a home screen icon (map) is added. Additionally, an offers button (the gift) is added. Figure \ref{fig:map_src} shows those icons at the bottom.
+ 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.4\textwidth]{./figures/map_src.jpg}
+\caption{The screen if a point of interest (star is clicked). A pup-up will display the name of the place and some interesting facts.}
+\label{fig:map_src}
+\end{figure}
 
 Points of interest are highlighted on the map. They can be clicked, which will then display more information about the places.
 
-There should be an option to add friends with a QR-code (can be scanned with the camera) or by entering a user name. 
+On the top of the screen, the different riddle icons are shown next to the classic menu icon (burger menu). If one of them is pushed, a related riddle pops up as shown in figure \ref{fig:map_riddle}. The riddles are displayed as a scroll that can be rolled up (swiped) or down to hide or display hints. Hints are displayed in text format; no arrows or direct navigation is shown.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.4\textwidth]{./figures/map_riddle.jpg}
+\caption{If a riddle is clicked, it is shown as text on a scroll. This scroll can be rolled back up to hide the riddle or scrolled further down, to show a hint.}
+\label{fig:map_riddle}
+\end{figure}
+
+There should be an option to add friends with a QR-code (can be scanned with the camera) or by entering a user name the friends tab is no longer accessible directly from the main screen, but stored away in the profile section. 
 
 \subsection*{Implementation and Evaluation Clickable Prototype}
-This prototype was drawn up again and made interactive with the Marvel App. It which has very similar features as Invision, which was introduced in the lectures. The advantage of Marvel is that it allows an unlimited number of prototypes in the free version. Both programs allow the designer to implement interactions on drawings that can be made directly in the program or on pictures. The later was used.
+This prototype was drawn up again and made interactive with the Marvel App. It which has very similar features as Invision, which was introduced in the lectures. The advantage of Marvel is that it allows an unlimited number of prototypes in the free version. Both programs allow the designer to implement interactions on drawings or on pictures that can be made directly in the program. The later was used.
 
 
 \subsection*{User Testing}
 
-This clickable prototype was then sent to various testers through a link. They were then able to click through the displayed web page like an app. Every tester was initially briefed about the general concept of the app and subsequently filmed while they were interacting with it. They were asked to comment on what they are seeing and doing and the designer, who was filming this process, gave them pointers on what to do or helped them if they got stuck, especially if that was due to limitations of the clickable prototype. The videos were analysed and the implications can be found below.
+This clickable prototype was sent to the testers through a link. They were  able to click through the displayed web page like an app. Every tester was initially briefed about the general concept of the app and subsequently filmed while they were interacting with it. They were asked to comment on what they are seeing and doing. The designer, who was filming this process, gave them pointers on what to do or helped them if they got stuck, especially if that was due to limitations of the clickable prototype. 
+
+The tests were done with eight people. Various students from different backgrounds participated in the evaluations. Admittedly, most were from an engineering or computer science background, but there was also a philosophy and a biology student. The age of the testers ranges from 20 to 30 years. 
 
 \paragraph{Limitations of the Prototype}
 The mobile phone on which the prototype is vital for testing. A few phones had a different aspect ratio than the one anticipated by the Marvel App (the project is set up with a template for HTC One) can cause problems. If the screen is too wide and not long enough, the application introduces vertical scrolling. This makes using the up and down scrolling interaction difficult, because it interferes with the scrolling of the Marvel App.
@@ -215,7 +233,20 @@ Additionally, not every button was correctly linked to every screen at all times
 
 Some testers had problems with the limited functions of the prototype. They had problems understanding that this is not actually a real application.
 
+\paragraph{Results}
+The transcripts from the user tests are not included here. Instead, generalised results are discussed. 
 
+Most testers liked the simplistic design of the prototype, which was mainly due to the limitations of the prototype itself. However, this simplicity should be included in the next stage. Even though the icons are very rough, testers had no problem identifying their purpose. 
+
+The testers often tried to just click on the map in the background to get back to the main screen when the riddle or a point of interest was displayed. 
+
+The swiping actions were not automatically identified. Both in the offers section and when hiding a riddle or displaying a hint for it.
+
+The testers all liked the gamification aspect of the app. They also enjoyed the points of interest and asked for more information like where the toilets or water fountains are. 
+
+Every single tester that found the badges tried to click on them, to find out what they are about. No one expected to be much functionality, but they all wanted to enlarge the icon. 
+
+The AR scanning function could not be tested properly. However, the app worked very well without it. Moreover, the question mark that is shown when "scanning" an AR tag seemed to confuse the testers and they did not always understand that they have to tap it. In theory, that step could be skipped without loosing any core functionality of the app idea.
 
 \todo{belinda, write some more}
 \subsection*{Implications for Next Stage}
@@ -224,7 +255,7 @@ The following recommendations were identified during the user test:
   \item If no riddle is selected, a message should be shown below the buttons: "click to get your first riddle".
   \item The information pop-up about point of interest should still allow all other interactions and not have to be clicked away first.  
   \item More information about a point of interest should be displayed. (Trivia, where are the toilets or water fountains?)
-  \item Have both swipe and click option in the offers to navigate from one QR-code to another.
+  \item Show the user in a better way that he can swipe to get to other offers. The arrows indicate clicking, but users usually want to swipe. 
   \item Remove the menu button. It is not needed an a settings menu can easily be stored away in the profile. This also increases the available space for the top buttons.  
   \item Hints need to be added when in scan mode ("ready to scan tag" / "click to activate").
   \item Hints need to be added to the riddles ("scroll down to get a hint", "scroll up to hide"), or at least arrows that point in the direction. Possibly allow click to reveal a new hint. If the user clicks anywhere on the map, that should hide the riddle.
