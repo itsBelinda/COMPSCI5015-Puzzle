@@ -42,3 +42,54 @@ Person 4 (Shaun 2): (this person does not look like they are using the app for t
 - offers: swiping to get to next offer discovered.
 - badges: tries to swipe
 - would like to get the riddle to show up when a new building is discovered
+
+Person 5 (Dan 1):
+- phone screen is too small for height of the app (causes interaction problems)
+- immediately identifes where the riddles are
+- scrolling mechnaism doesn't work due to small screen
+- wants to tap outside the riddle to get it to disappear
+- wants instructions on what motions to use (little arrows or one time instructions)
+- finds badges immediately
+- offer screen: wants to tap to get to next offer
+- does not find "points of interrest"
+- does not find hints
+
+Person 6 (Dan 2):
+- phone screen is too small for height of the app (causes interaction problems)
+- can hide riddle even though it's difficult with the phone
+- finds badges, but they are ab it too hidden for them
+- suggests button for badges
+- wants to be able to scroll the map
+- finds points of interrest
+- does not find hints
+
+Person 7 (Ben 1):
+- finds points of interest, looks at them intensely
+- finds riddles easily
+- almost picks up phone to 'scan'
+- leaves claim riddle without claiming the points
+- finds concept promissing
+- finds app intuitive
+- likes gamification of app
+- likes gifts
+
+Person 8 (Zsusi 1):
+- clicks on profile and badges first.
+- unsuccessfully tries to find friends
+- finds riddle after some problems (too small screen)
+- hiding riddle causes problems. but uses the right motions.
+- does not identify the camera icon.
+- likes that it's highlighted what can be clicked (due to the mockup)
+- badges are always cool
+- finds drawn map confusing
+- likes gmification
+- tries to go to (unimplemented) menu
+- likes points of interrest.
+- finds add a friend
+- does not find hint
+
+
+
+
+
+

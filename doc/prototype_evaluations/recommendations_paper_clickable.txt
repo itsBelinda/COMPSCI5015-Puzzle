@@ -5,7 +5,8 @@ Changes for next prototype:
 - remove menu button (is not needed, could be hidden in the profile)
   frees up space for top buttons
 - add hints when in scan mode / ar mode ("ready to scan tag" / "click to activate")
-- add hint to riddle ("scroll down to get a hint", "scroll up to hide")
+- add hint to riddle ("scroll down to get a hint", "scroll up to hide") 
+   or at leat arrows that point in the direction, optionally allow click.
 - add promt "are you sure you want to use a hint"
   --> AR really necessary? nice gimmick, but not specifically needed, scanning a code seems to be enough.
 - add explations to badges (show them as pop-ups when clicking on them, display name, e.g. "discovered 5 cafes")
