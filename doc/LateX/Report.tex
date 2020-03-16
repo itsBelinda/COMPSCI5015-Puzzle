@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{xurl}
+
+\setlength {\marginparwidth}{2cm}
 \usepackage{todonotes}
 
 % Set heading spacings, please don't change this
@@ -22,6 +24,8 @@
 \title{Puzzle Map}
 \date{} % Leave empty
 
+\setlength {\marginparwidth}{2cm}
+
 \begin{document}
 
 \maketitle
@@ -31,7 +35,6 @@
 \section*{Introduction}
 
 This is the template for the MHCI coursework report.
-
 
 % ------------------------------------
 \section*{Purpose}
@@ -75,38 +78,59 @@ The following are the main functional requirements the system has to fit:
 \end{itemize}
 
 \subsection*{Non-functional requirements}
-Non-functional requirements may not relate directly to the system's operations, but are equally important to consider for a good UX. It has been shown loading times affect the number of users retained by a service\footnote{\url{https://developers.google.com/web/fundamentals/performance/why-performance-matters}}. Therefore the following performance limits were set for the app, speedwise: the system should login in <5s, recognise tags in <5s, and complete the initialisation (show splash screen) in <20s.\\
-It is also key to calculate for errors that might happen. To ensure users are never left in the dark, in case an unexpected issue were to happen, the system must show an error page with a clear message on what has happened, and what should be done by the user to mitigate it (e.g. "Uh-oh, something puzzled our app! Please leave feedback here <link>!".
+Non-functional requirements may not relate directly to the system's operations, but are equally important to consider for a good UX. It has been shown loading times affect the number of users retained by a service\footnote{\url{https://developers.google.com/web/fundamentals/performance/why-performance-matters}}. Therefore the following performance limits were set for the app, speedwise: the system should login in \textless5s, recognise tags in \textless5s, and complete the initialisation (show splash screen) in \textless20s.\\
+It is also key to calculate for errors that might happen. To ensure users are never left in the dark, in case an unexpected issue were to happen, the system must show an error page with a clear message on what has happened, and what should be done by the user to mitigate it (e.g. "Uh-oh, something puzzled our app! Please leave feedback here \textless link\textgreater!".
 \subsection*{Safety and Security}
 While the design of the app focuses on most interactions happening when the user is stationary by a checkpoint, it allows for it to be used when the user is mobile (check map, friends status, etc.). To ensure the safety of the users, the app therefore does not require to be constantly watched. This is complemented by the non-linearity of the application, as the user can choose their own path, and therefore can avoid unsafe areas. The system also needs to be protected to avoid the loss of data, therefore the remote database requires regular backups - this can be supported by the user data being stored on the device locally.
 \subsection*{Quality, maintainability and availability}
 The quality of the product is the final aspect focused on. It was determined that not only the database and the app should be available at all times, but the checkpoints, too. These naturally vary based on building opening times, but the app has to provide satisfactory information on when checkpoints may not be available. The system also needs to correctly relay and register checkpoint location information, as well as be easily adjustable and maintainable for the adding and removal of checkpoints. 
 
-
-
 % ------------------------------------
 \section*{Concept Generation}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+At this stage of the project, the 5 team members decided to come up with interaction ideas on their own, which was followed by a group discussion of the strengths and weaknesses of each idea.
+It was agreed upon that we are to build an application that presents small puzzles or riddles to the user, who then has to solve them to get to certain locations on campus, but can do so in their own time, pace and order.
+For this two key components were necessary to be defined: the details of checkpoints, and the riddles.
+\subsection*{Checkpoint Interactions}
+The starting point was to determine how a user would check in at a checkpoint, as it is the most significant design component of the project. 
+The theme of this interaction was fairly similar across the team, with all 5 team members considering using QR codes that need to be scanned. 
+This was further supported by the team arguing that AR codes are very similar in construction, and expanding on the QR element idea to AR would provide a better user interaction. 
+By having the user be able to interact with the checkpoint in 3D after scanning the code, we could add another gamified, interactive element to the action, making it more enjoyable. 
+The ideas for AR items to be visualised included mascots, treasure chests, question marks, gift boxes and breakable items that need to be tapped several times to "break into" them and reveal the checkpoint achievements.\\
+Other ideas considered for checkpoint interactions was using an RFID tag to mark the location. This would make it more accessible for users, as most modern day mobile devices are all configured to use Near-Field Communications (NFC) technology. 
+NFC is the basis of many smartphone application, most importantly mobile pay services, such as Google Pay, Apple Pay and Android Pay. Android users can use NFC for virtually any application, Apple users however can be restricted to only payment service uses, based on the model and Operating System they are running. 
+This idea would have meant a need for custom made NFC tags to be placed at the locations, thus it was deemed a less ideal option due to the fact they are more costly to set up, and are harder to replace.
+
+\subsection*{Riddles}
+The next interaction we focused on was the other selling point of our application: the riddles. 
+It was decided that while it was necessary to make the puzzles accessible for everyone - with specific emphasis on international students visiting the campus, or even Glasgow for the very first time, - it was also important to keep riddles interesting.
+This meant that the difficulty level of the riddles had to either cater for everyone, or to include different difficulty levels from which students choose from.
+There were several varying ideas presented by the group members at this stage.
+One idea was to provide different riddles in different languages, prompting users to seek out other users who speak that language, promoting the group aspect of the application. Some shortcomings regarding this idea were highlighted as modern day translation apps make it easy to "cheat", and that more introverted users may find this disheartening.
+Other ideas included using poems such as haikus, sonnets or limericks, as well as wordplay type riddles, such as anagrams. It was agreed that these may be too difficult to solve for students who do not speak English as their first language.
+The most widely agreed on idea was to simply describe the locations in plain English, hinting at certain physical or historical characteristics of each location. It was agreed that this would make the app the most inclusive, while at the same time presenting the user with information they may not already know.\\
+Regardless of the riddle content, 
+
+
 
 % ------------------------------------
 \section*{Paper Prototyping}
-Once the inital design ideas were agreed upon, the ideas can then be represented as paper prototypes. Each team member is reponsible with designing their own interaction prototypes that represents the previously agreed design choices.
+Once the inital design ideas were agreed upon, the ideas could then be represented as paper prototypes. Each team member was reponsible with designing their own interaction prototypes that represents the previously agreed design choices.
 
 Each team member presented their paper prototypes to the other team members. The paper prototypes were based on an imaginary story of a user on the app. The prototypes were reviewed by all team members.
 
-\subsection*{Prototype 1 (bens)}
+\subsection*{Prototype 1 (Ben)}
 The first prototype generated focusses on maintaining the map as the center of the user's view. The map will almost always be visible regardless of what the user wishes to do. The main interactive elements of the screen are located at the bottom of the screen. The only exception of this rule is that the settings button will be located at the top-left side of the screen.
 
 The user can press the buttons at the bottom of the screen to navigate to the different sections of the screen. The user will always be within one or two screens away from the main map view. The buttons located at the bottom of the screen include: a home buton to return to the main map view; a button to view the current destination and available riddle; a button to initiate the camera module; a button to access a list of currently available offers and a button to access the profile.
 
-\subsection*{Prototype 2 (daniels)}
+\subsection*{Prototype 2 (Daniels)}
 Prototype two was split amongst more frames and was more focussed on keeping the screen from being cluttered. The user is greeted with a splash screen with a loading bar to show the current progress of loading the app. The user will then be guided to a signup/login screen. Once the user logs in for the first time, a quiz is displayed. This quiz will have questions and answers ranging from: strongly agree; agree; disagree and strongly disagree. Additionally, there will also be a progress indicator that shows the user how many questions are remaining. 
 
 Once the user has finished the initial quiz, they will be given the option to select a riddle. Once the user selects a riddle, the question is displayed on the screen. The user can swipe left from this screen to access a list of available hints and unlock any other hints they require. The user can also swipe right and access the camera. This camera is used to take a picture of the AR code to complete the riddle. 
 
 In addition to these screens, the user will also be able to access their profile. This will contain relative information about the user such as their username and profile picture. The user will always have a back button to escape back to the view containing the current riddle.
 
-\subsection*{Prototype 3 (zsuzsi)}
+\subsection*{Prototype 3 (Zsuzsi)}
 Paper prototype three is more focussed on user interactivity. When the user initially starts the application, they are greeted with a splash screen with the app logo. This splash screen converts into a login screen for the user. The users are also given an option to create an account.
 
 Once the user logs into their account, they are shown the main screen of the app. This screen has a list of options for the user to select from. If it is the user's first time using the app, a button labelled "get started" which the user will be directed to find a valid AR tag. Otherwise, if the user has already initiated a riddle, they can access their current riddle from that screen. There is a "profile" button which can show the user their profile and all the achievements they have gained. Additionally, there is a "settings" button which takes the user to a page that has all the settings that can be modified to change the game mechanics.
@@ -117,7 +141,7 @@ Once the user has selected a riddle, the riddle is shown on screen. The user has
 
 Once the user scans the AR code, the app will inform them if they have been successful and scanned the correct location. The app will also inform them if they have levelled up and any free offers they have unlocked.
 
-\subsection*{Prototype 4 (shaun)}
+\subsection*{Prototype 4 (Shaun)}
 This prototype also focussed heavily on maintaining a minimilistic design. This prototype uses many different screens to display information. 
 
 The prototype has an initial start screen with a button to continue to the login screen. This login screen has an option to remember the user. Once the user logs in, if this is their first time using the app, they are displayed with a personality quiz. Otherwise, the main screen is shown.
@@ -128,7 +152,7 @@ Once a user scans a valid AR tag, they are shown with a screen that details info
 
 The profile can be accessed through the settings menu. This profile will display: the user's name; the user's profile picture; the basic information held about the user; the user's friend list and a back button to return to the main map screen.
 
-\subsection*{Prototype 5(belinda)}
+\subsection*{Prototype 5(Belinda)}
 
 The final prototype suggested had a similar structure to the previous prototypes. A minimalistic design was implemented for the initial use of the app. The user would be greeted with two buttons; one to sign up and one to log in. When the user has signed in for the first time they will be greeted with a quiz.
 
