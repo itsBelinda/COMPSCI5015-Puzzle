@@ -48,11 +48,13 @@ The system is based on a remote database which stores the details of the locatio
 \section*{System Description}
 
 \subsection*{Functionality}
-Users can access the app by creating an account using their university email (specifically, GUID). The app allows for not only the creation of the account, but the maintenance (forgotten password, change details, etc.), and deletion of it. Users have to fill out a personality quiz, the answers of which will later on bias the likelyhood of what location a user will most likely get offered to head to next. The app will make it possible to read an interactive checkpoint, e.g. AR tag, which would prompt a riddle to the user that they need to solve. In the possibility of the puzzle being too hard to decipher, there are 3 hints available for each, which make the puzzle gradually easier to solve. The app will also allow for users to increase their in-game experience by correctly solving riddles, and use the experience to level up and gain rewards by doing well in the app. The system also allows for and promotes social interactions between users, to work together to a shared goal of successfully solving a riddle.\\
+Users can access the app by creating an account using their university email (specifically, GUID). The app allows for not only the creation of the account, but the maintenance (forgotten password, change details, etc.), and deletion of it. Users have to fill out a personality quiz, the answers of which will later on bias the likelyhood of what location a user will most likely get offered to head to next. The app will make it possible to read an interactive checkpoint, e.g. AR tag, which would prompt a riddle to the user that they need to solve. In the possibility of the puzzle being too hard to decipher, there are 3 hints available for each, which make the puzzle gradually easier to solve. The app will also allow for users to increase their in-game experience by correctly solving riddles, and use the experience to level up and gain rewards by doing well in the app. The system also allows for and promotes social interactions between users, to work together to a shared goal of successfully solving a riddle.
+
 Aspects that entertain and engage the user include the riddles/puzzles, AR and the checkpoints, achievements and online character development, friend connections and gifting, freebies and rewards to gain, and the learning of insider information about the campus.
 
 \subsection*{User characteristics and needs}
-The goals of the users would be to visit as many locations on campus as possible, and do it in the most efficient way gaining the most bonus from solving riddles correctly. This would give them increased chances to gain freebies, level up and develop their level of experience, which would keep them captivated, entertained and interested. New students and faculty would use the app to get more information about the campus, while existing university members would use the app to either learn about the university with a delay, or to put their existing knowledge to use to gain as many points as possible and get the rewards.\\
+The goals of the users would be to visit as many locations on campus as possible, and do it in the most efficient way gaining the most bonus from solving riddles correctly. This would give them increased chances to gain freebies, level up and develop their level of experience, which would keep them captivated, entertained and interested. New students and faculty would use the app to get more information about the campus, while existing university members would use the app to either learn about the university with a delay, or to put their existing knowledge to use to gain as many points as possible and get the rewards.
+
 The main motivation, however, of any type of user is likely to be the love of mysteries, problem solving, and the possibility to pass the time in a fun way and interact with peers with a more relaxed environment than social media. In the case of any users, however, it can be assumed that they have a busy lifestyle and therefore the app is a series of short tasks without expiry dates, which can fit around any student/staff member's schedule.
 
 \subsection*{Constraints}
@@ -92,16 +94,20 @@ The quality of the product is the final aspect focused on. It was determined tha
 At this stage of the project, the 5 team members decided to come up with interaction ideas on their own, which was followed by a group discussion of the strengths and weaknesses of each idea.
 It was agreed upon that we are to build an application that presents small puzzles or riddles to the user, who then has to solve them to get to certain locations on campus, but can do so in their own time, pace and order.
 For this two key components were necessary to be defined: the details of checkpoints, and the riddles.
+Each member created storyboards for these two interactions to see how our users, our system and the environment would behave with each other.
+These were summarised and a set of example initial storyboards were created, which can be found in Appendix C. \todo{which appendix at the end}
 \subsection*{Checkpoint Interactions}
 The starting point was to determine how a user would check in at a checkpoint, as it is the most significant design component of the project. 
 The theme of this interaction was fairly similar across the team, with all 5 team members considering using QR codes that need to be scanned. 
 This was further supported by the team arguing that AR codes are very similar in construction, and expanding on the QR element idea to AR would provide a better user interaction. 
 By having the user be able to interact with the checkpoint in 3D after scanning the code, we could add another gamified, interactive element to the action, making it more enjoyable. 
-The ideas for AR items to be visualised included mascots, treasure chests, question marks, gift boxes and breakable items that need to be tapped several times to "break into" them and reveal the checkpoint achievements.\\
-Other ideas considered for checkpoint interactions was using an RFID tag to mark the location. This would make it more accessible for users, as most modern day mobile devices are all configured to use Near-Field Communications (NFC) technology. 
+The ideas for AR items to be visualised included mascots, treasure chests, question marks, gift boxes and breakable items that need to be tapped several times to "break into" them and reveal the checkpoint achievements.
+
+Other ideas considered for checkpoint interactions was using an RFID tag to mark the location. This would be possible, as most modern day mobile devices are all configured to use Near-Field Communications (NFC) technology. 
 NFC is the basis of many smartphone application, most importantly mobile pay services, such as Google Pay, Apple Pay and Android Pay. Android users can use NFC for virtually any application, Apple users however can be restricted to only payment service uses, based on the model and Operating System they are running. 
 This idea would have meant a need for custom made NFC tags to be placed at the locations, thus it was deemed a less ideal option due to the fact they are more costly to set up, and are harder to replace.
 
+Overall, it was agreed that with any check-in, the phone should provide audio- and physical feedback by playing a small tune and vibrating - the type of sound and the length or number of vibrations can vary whether the location is correct or not.
 \subsection*{Riddles}
 The next interaction we focused on was the other selling point of our application: the riddles. 
 It was decided that while it was necessary to make the puzzles accessible for everyone - with specific emphasis on international students visiting the campus, or even Glasgow for the very first time, - it was also important to keep riddles interesting.
@@ -109,11 +115,18 @@ This meant that the difficulty level of the riddles had to either cater for ever
 There were several varying ideas presented by the group members at this stage.
 One idea was to provide different riddles in different languages, prompting users to seek out other users who speak that language, promoting the group aspect of the application. Some shortcomings regarding this idea were highlighted as modern day translation apps make it easy to "cheat", and that more introverted users may find this disheartening.
 Other ideas included using poems such as haikus, sonnets or limericks, as well as wordplay type riddles, such as anagrams. It was agreed that these may be too difficult to solve for students who do not speak English as their first language.
-The most widely agreed on idea was to simply describe the locations in plain English, hinting at certain physical or historical characteristics of each location. It was agreed that this would make the app the most inclusive, while at the same time presenting the user with information they may not already know.\\
-Regardless of the riddle content, 
+The most widely agreed on idea was to simply describe the locations in plain English, hinting at certain physical or historical characteristics of each location. It was agreed that this would make the app the most inclusive, while at the same time presenting the user with information they may not already know.
 
+Regardless of the riddle content, it was agreed the riddles can be selected by type (lecture, lab or social). For this, the screen will have to show three buttons to choose from. 
+The placement of buttons varied by implementation, some pitching the idea of a classic 3 button list layout in the middle of the screen, and some prompting it should be included with a map.
 
+The method of presentation of the riddles also differed in the ideas of team members. 
+Those with the classic button layout either said the riddle should pop up as a generic notification, or the screen should change and an animation of a scroll "rolling out" should reveal the riddle.
+Those who agreed the buttons should be embedded in a map screen, argued the riddle should not be presented as new screens, but rather overlay the map screen as popups or overlay as the animated scroll rolling out.
+It was also pitched the riddle could reveal itself by slowly swimming down from the top of the screen, which received positive reviews from the team.
+With either revelation method it was agreed that this is one of the gamification elements that can entertain users and make for great UX, therefore is important we get it right.
 
+The team agreed on the user feedback regarding riddles as well, and settled that the riddle reveal should be accompanied by a sound effect (a "whoosh" shound for the scroll, or a "pop" sound for the popup) to make the app more interactive, and regardless of the placement of the buttons, they should provide both physical feedback (vibration when pressed) and audio feedback (tap sound when pressed), based on device settings configurations.
 % ------------------------------------
 \section*{Paper Prototyping}
 Once the inital design ideas were agreed upon, the ideas could then be represented as paper prototypes. Each team member was reponsible with designing their own interaction prototypes that represents the previously agreed design choices.
@@ -260,6 +273,7 @@ Additionally, some potential improvements have been identified that need to be e
 \end{itemize}
 % ------------------------------------
 \section*{Demonstrator Prototype}
+\todo{We need to add a comment here about how the storyboards have changed}
 
 After recieving feedback from the refined prototype, a demonstrator prototype was created to show the implementation of the main design features within an application. This demonstrator prototype is created for Android devices and is created using "Android Studio". The application is created using Java. The application was developed for Android 9/Pie (API level 28).
 
@@ -284,7 +298,7 @@ Clicking "Friends" shows a list of all of the friends a user has added. Their le
 
 \onecolumn
 \section*{Appendices}
-\subsection*{Appendix A}
+\subsection*{Appendix A - Initial Prototypes}
 \subsection*{Prototype 1}
 \includegraphics[width=0.5\textwidth]{./figures/bens_initial_proto/1.jpg}
 
@@ -301,9 +315,14 @@ Clicking "Friends" shows a list of all of the friends a user has added. Their le
 \includegraphics[width=0.5\textwidth]{./figures/belindas_initial_proto/1.jpg}
 
 \newpage
-\subsection*{Appendix B}
+\subsection*{Appendix B - Refined Prototype}
 \includegraphics[width=0.3\textwidth]{./figures/refined_proto/1.jpg}
 \includegraphics[width=0.3\textwidth]{./figures/refined_proto/2.jpg}
 
-
+\newpage
+\subsection*{Appendix C - Initial Storyboards}
+\include{initialStoryboards.tex}
+\newpage
+\subsection*{Appendix D - Final Storyboards}
+\include{finalStoryboards.tex}
 \end{document}
