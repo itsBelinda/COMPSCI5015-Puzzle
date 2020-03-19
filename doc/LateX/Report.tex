@@ -48,14 +48,14 @@ The system is based on a remote database which stores the details of the locatio
 \section*{System Description}
 
 \subsection*{Functionality}
-Users can access the app by creating an account using their university email (specifically, GUID). The app allows for not only the creation of the account, but the maintenance (forgotten password, change details, etc.), and deletion of it. Users have to fill out a personality quiz, the answers of which will later on bias the likelyhood of what location a user will most likely get offered to head to next. The app will make it possible to read an interactive checkpoint, e.g. AR tag, which would prompt a riddle to the user that they need to solve. In the possibility of the puzzle being too hard to decipher, there are 3 hints available for each, which make the puzzle gradually easier to solve. The app will also allow for users to increase their in-game experience by correctly solving riddles, and use the experience to level up and gain rewards by doing well in the app. The system also allows for and promotes social interactions between users, to work together to a shared goal of successfully solving a riddle.
+Users can access the app by creating an account using their university email (specifically, GUID). The app allows for not only the creation of the account, but the maintenance (forgotten password, change details, etc.), and deletion of it. Users have to fill out a personality quiz, the answers of which will later on bias the likelyhood of what location a user will most likely get offered to head to next. The app will make it possible to read an interactive checkpoint, e.g. AR tag, which would prompt a riddle to the user that they need to solve. In the possibility of the puzzle being too hard to decipher, there are hints available for each, which make the puzzle gradually easier to solve. The app will also allow for users to increase their in-game experience by correctly solving riddles, and use the experience to level up and gain rewards by doing well in the app. The system also allows for and promotes social interactions between users, to work together to a shared goal of successfully solving a riddle.
 
 Aspects that entertain and engage the user include the riddles/puzzles, AR and the checkpoints, achievements and online character development, friend connections and gifting, freebies and rewards to gain, and the learning of insider information about the campus.
 
 \subsection*{User characteristics and needs}
 The goals of the users would be to visit as many locations on campus as possible, and do it in the most efficient way gaining the most bonus from solving riddles correctly. This would give them increased chances to gain freebies, level up and develop their level of experience, which would keep them captivated, entertained and interested. New students and faculty would use the app to get more information about the campus, while existing university members would use the app to either learn about the university with a delay, or to put their existing knowledge to use to gain as many points as possible and get the rewards.
 
-The main motivation, however, of any type of user is likely to be the love of mysteries, problem solving, and the possibility to pass the time in a fun way and interact with peers with a more relaxed environment than social media. In the case of any users, however, it can be assumed that they have a busy lifestyle and therefore the app is a series of short tasks without expiry dates, which can fit around any student/staff member's schedule.
+The main motivation, however, of any type of user is likely to be the love of mysteries, problem solving, and the possibility to pass the time in a fun way and interact with peers within a more relaxed environment than social media. In the case of any user, however, it can be assumed that they have a busy lifestyle and therefore the app is a series of short tasks without expiry dates, which can fit around any student/staff member's schedule.
 
 \subsection*{Constraints}
 The two biggest constraints to the operations of the app are the user's device capabilities, and the reliability of internet connectivity. These are both aspects the app needs to be designed for, to minimise the disruption these constraints would mean. Since users can walk freely around campus, gepgraphical and physical obstacles do not represent significant constraints.
@@ -70,94 +70,109 @@ The following are the main functional requirements the system has to fit:
 \begin{itemize}[noitemsep]
   \item The system needs to scan the AR tag/QR code/etc.
   \item The system needs to randomly choose a building/riddle based on category
-  \item The system needs to register category chosen
+  \item The system needs to register the chosen category 
   \item The system needs to register personality test results
   \item The system needs to respond randomly with bias from personality test
   \item The system needs to register the riddle being solved/not solved
-  \item The system needs to update user profile based on solved/not solved riddle
-  \item The system needs to update user profile in relation to freebies, levels, achievements
+  \item The system needs to update the user profile based on solved/not solved riddle
+  \item The system needs to update the user profile in relation to freebies, levels, achievements
   \item The system needs to handle account creation and logins
   \item The system needs to communicate with a database to store all data
   \item The system needs to communicate online
 \end{itemize}
 
 \subsection*{Non-functional requirements}
-Non-functional requirements may not relate directly to the system's operations, but are equally important to consider for a good UX. It has been shown loading times affect the number of users retained by a service\footnote{\url{https://developers.google.com/web/fundamentals/performance/why-performance-matters}}. Therefore the following performance limits were set for the app, speedwise: the system should login in \textless5s, recognise tags in \textless5s, and complete the initialisation (show splash screen) in \textless20s.\\
+Non-functional requirements may not relate directly to the system's operations, but are equally important to consider for a good UX. It has been shown that loading times affect the number of users retained by a service\footnote{\url{https://developers.google.com/web/fundamentals/performance/why-performance-matters}}. Therefore the following performance limits were set for the app, speedwise: the system should login in \textless5s, recognise tags in \textless2s, and complete the initialisation (show splash screen) in \textless10s.\\
 It is also key to calculate for errors that might happen. To ensure users are never left in the dark, in case an unexpected issue were to happen, the system must show an error page with a clear message on what has happened, and what should be done by the user to mitigate it (e.g. "Uh-oh, something puzzled our app! Please leave feedback here \textless link\textgreater!".
 \subsection*{Safety and Security}
-While the design of the app focuses on most interactions happening when the user is stationary by a checkpoint, it allows for it to be used when the user is mobile (check map, friends status, etc.). To ensure the safety of the users, the app therefore does not require to be constantly watched. This is complemented by the non-linearity of the application, as the user can choose their own path, and therefore can avoid unsafe areas. The system also needs to be protected to avoid the loss of data, therefore the remote database requires regular backups - this can be supported by the user data being stored on the device locally.
-\subsection*{Quality, maintainability and availability}
-The quality of the product is the final aspect focused on. It was determined that not only the database and the app should be available at all times, but the checkpoints, too. These naturally vary based on building opening times, but the app has to provide satisfactory information on when checkpoints may not be available. The system also needs to correctly relay and register checkpoint location information, as well as be easily adjustable and maintainable for the adding and removal of checkpoints. 
+While the design of the app focuses on most interactions happening when the user is stationary by a checkpoint, it allows for it to be used when the user is mobile (check map, friends status, etc.). To ensure the safety of the users, the app therefore does not require to be constantly watched. This is complemented by the non-linearity of the application, as the user can choose their own path, and therefore avoid unsafe areas. The system also needs to be protected to avoid the loss of data. Therefore, the remote database requires regular backups - this can be supported by the user data being stored on the device locally.
+\subsection*{Quality, Maintainability and Availability}
+The quality of the product is the final aspect focused on. It was determined that not only the database and the app should be available at all times, but the checkpoints, too. These are naturally vary based on building opening times, but the app has to provide satisfactory information on when checkpoints may not be available. The system also needs to correctly relay and register checkpoint location information, as well as be easily adjustable and maintainable for the adding and removal of checkpoints. 
 
 % ------------------------------------
 \section*{Concept Generation}
-At this stage of the project, the 5 team members decided to come up with interaction ideas on their own, which was followed by a group discussion of the strengths and weaknesses of each idea.
-It was agreed upon that we are to build an application that presents small puzzles or riddles to the user, who then has to solve them to get to certain locations on campus, but can do so in their own time, pace and order.
-For this two key components were necessary to be defined: the details of checkpoints, and the riddles.
-Each member created storyboards for these two interactions to see how our users, our system and the environment would behave with each other.
+At this stage of the project, the five team members decided to come up with interaction ideas on their own, which was followed by a group discussion of the strengths and weaknesses of each idea.
+It was agreed upon that we are to build an application that presents small puzzles or riddles to the user who then has to solve them to get to certain locations on campus, but can do so in their own time, pace and order.
+
+For this, two key components were necessary to be defined: the details of checkpoints, and the riddles.
+
+Each member created storyboards for these two interactions to see how users, the system and the environment would behave with each other.
+
 These were summarised and a set of example initial storyboards were created, which can be found in Appendix C.
 \subsection*{Checkpoint Interactions}
 The starting point was to determine how a user would check in at a checkpoint, as it is the most significant design component of the project. 
-The theme of this interaction was fairly similar across the team, with all 5 team members considering using QR codes that need to be scanned. 
-This was further supported by the team arguing that AR codes are very similar in construction, and expanding on the QR element idea to AR would provide a better user interaction. 
+
+The theme of this interaction was fairly similar across the team, with all team members considering using QR codes that need to be scanned. 
+ 
+This was further supported by the team arguing that AR codes are very similar in construction, and expanding on the QR element idea to AR would provide a more interesting user interaction. 
+
 By having the user be able to interact with the checkpoint in 3D after scanning the code, we could add another gamified, interactive element to the action, making it more enjoyable. 
+
 The ideas for AR items to be visualised included mascots, treasure chests, question marks, gift boxes and breakable items that need to be tapped several times to "break into" them and reveal the checkpoint achievements.
 
-Other ideas considered for checkpoint interactions was using an RFID tag to mark the location. This would be possible, as most modern day mobile devices are all configured to use Near-Field Communications (NFC) technology. 
-NFC is the basis of many smartphone application, most importantly mobile pay services, such as Google Pay, Apple Pay and Android Pay. Android users can use NFC for virtually any application, Apple users however can be restricted to only payment service uses, based on the model and Operating System they are running. 
+Another idea considered for checkpoint interactions was using an RFID tag to mark the location. This would be possible, as most modern day mobile devices are all configured to use Near-Field Communications (NFC) technology. 
+
+NFC is the basis of many smartphone applications, most importantly mobile pay services, such as Google Pay, Apple Pay and Android Pay. Android users can use NFC for virtually any application, Apple users however can be restricted to only payment service uses, based on the model and Operating System they are running. 
+
 This idea would have meant a need for custom made NFC tags to be placed at the locations, thus it was deemed a less ideal option due to the fact they are more costly to set up, and are harder to replace.
 
 Overall, it was agreed that with any check-in, the phone should provide audio- and physical feedback by playing a small tune and vibrating - the type of sound and the length or number of vibrations can vary whether the location is correct or not.
+
 \subsection*{Riddles}
 The next interaction we focused on was the other selling point of our application: the riddles. 
+
 It was decided that while it was necessary to make the puzzles accessible for everyone - with specific emphasis on international students visiting the campus, or even Glasgow for the very first time, - it was also important to keep riddles interesting.
 This meant that the difficulty level of the riddles had to either cater for everyone, or to include different difficulty levels from which students choose from.
+
 There were several varying ideas presented by the group members at this stage.
+
 One idea was to provide different riddles in different languages, prompting users to seek out other users who speak that language, promoting the group aspect of the application. Some shortcomings regarding this idea were highlighted as modern day translation apps make it easy to "cheat", and that more introverted users may find this disheartening.
+
 Other ideas included using poems such as haikus, sonnets or limericks, as well as wordplay type riddles, such as anagrams. It was agreed that these may be too difficult to solve for students who do not speak English as their first language.
 The most widely agreed on idea was to simply describe the locations in plain English, hinting at certain physical or historical characteristics of each location. It was agreed that this would make the app the most inclusive, while at the same time presenting the user with information they may not already know.
 
 Regardless of the riddle content, it was agreed the riddles can be selected by type (lecture, lab or social). For this, the screen will have to show three buttons to choose from. 
-The placement of buttons varied by implementation, some pitching the idea of a classic 3 button list layout in the middle of the screen, and some prompting it should be included with a map.
+
+The placement of buttons varied by implementation, some pitching the idea of a classic three button list layout in the middle of the screen, and some prompting it should be included with a map.
 
 The method of presentation of the riddles also differed in the ideas of team members. 
 Those with the classic button layout either said the riddle should pop up as a generic notification, or the screen should change and an animation of a scroll "rolling out" should reveal the riddle.
-Those who agreed the buttons should be embedded in a map screen, argued the riddle should not be presented as new screens, but rather overlay the map screen as popups or overlay as the animated scroll rolling out.
+Those who agreed the buttons should be embedded in a map screen, argued the riddle should not be presented as new screens, but rather overlay the map screen as pop-ups or overlay as the animated scroll rolling out.
 It was also pitched the riddle could reveal itself by slowly swimming down from the top of the screen, which received positive reviews from the team.
 With either revelation method it was agreed that this is one of the gamification elements that can entertain users and make for great UX, therefore is important we get it right.
 
-The team agreed on the user feedback regarding riddles as well, and settled that the riddle reveal should be accompanied by a sound effect (a "whoosh" shound for the scroll, or a "pop" sound for the popup) to make the app more interactive, and regardless of the placement of the buttons, they should provide both physical feedback (vibration when pressed) and audio feedback (tap sound when pressed), based on device settings configurations.
+The team agreed on the user feedback regarding riddles as well, and settled that the riddle reveal should be accompanied by a sound effect (a "whoosh" sound for the scroll, or a "pop" sound for the pop-up) to make the app more interactive, and regardless of the placement of the buttons, they should provide both physical feedback (vibration when pressed) and audio feedback (tap sound when pressed), based on device settings configurations.
 % ------------------------------------
 \section*{Paper Prototyping}
-Once the inital design ideas were agreed upon, the ideas could then be represented as paper prototypes. Each team member was reponsible with designing their own interaction prototypes that represents the previously agreed design choices.
+Once the initial design ideas were agreed upon, the ideas could then be represented as paper prototypes. Each team member was responsible with designing their own interaction prototypes that represents the previously agreed design choices.
 
 Each team member presented their paper prototypes to the other team members. The paper prototypes were based on an imaginary story of a user on the app. The prototypes were reviewed by all team members. These paper prototypes are found in Appendix A.
 
 \subsection*{Prototype 1}
 The first prototype generated focusses on maintaining the map as the center of the user's view. The map will almost always be visible regardless of what the user wishes to do. The main interactive elements of the screen are located at the bottom of the screen. The only exception of this rule is that the settings button will be located at the top-left side of the screen.
 
-The user can press the buttons at the bottom of the screen to navigate to the different sections of the screen. The user will always be within one or two screens away from the main map view. The buttons located at the bottom of the screen include: a home buton to return to the main map view; a button to view the current destination and available riddle; a button to initiate the camera module; a button to access a list of currently available offers and a button to access the profile.
+The user can press the buttons at the bottom of the screen to navigate to the different sections of the screen. The user will always be within one or two screens away from the main map view. The buttons located at the bottom of the screen include: a home button to return to the main map view; a button to view the current destination and available riddle; a button to initiate the camera module; a button to access a list of currently available offers and a button to access the profile.
 
 \subsection*{Prototype 2}
-Prototype two was split amongst more frames and was more focussed on keeping the screen from being cluttered. The user is greeted with a splash screen with a loading bar to show the current progress of loading the app. The user will then be guided to a signup/login screen. Once the user logs in for the first time, a quiz is displayed. This quiz will have questions and answers ranging from: strongly agree; agree; disagree and strongly disagree. Additionally, there will also be a progress indicator that shows the user how many questions are remaining. 
+Prototype two was split amongst more frames and was more focussed on keeping the screen from being cluttered. The user is greeted with a splash screen with a loading bar to show the current progress of loading the app. The user will then be guided to a sign-up/login screen. Once the user logs in for the first time, a quiz is displayed. This quiz will have questions and answers ranging from: strongly agree; agree; disagree and strongly disagree. Additionally, there will also be a progress indicator that shows the user how many questions are remaining. 
 
 Once the user has finished the initial quiz, they will be given the option to select a riddle. Once the user selects a riddle, the question is displayed on the screen. The user can swipe left from this screen to access a list of available hints and unlock any other hints they require. The user can also swipe right and access the camera. This camera is used to take a picture of the AR code to complete the riddle. 
 
-In addition to these screens, the user will also be able to access their profile. This will contain relative information about the user such as their username and profile picture. The user will always have a back button to escape back to the view containing the current riddle.
+In addition to these screens, the user will also be able to access their profile. This will contain relative information about the user such as their user name and profile picture. The user will always have a back button to escape back to the view containing the current riddle.
 
 \subsection*{Prototype 3}
 Paper prototype three is more focussed on user interactivity. When the user initially starts the application, they are greeted with a splash screen with the app logo. This splash screen converts into a login screen for the user. The users are also given an option to create an account.
 
 Once the user logs into their account, they are shown the main screen of the app. This screen has a list of options for the user to select from. If it is the user's first time using the app, a button labelled "get started" which the user will be directed to find a valid AR tag. Otherwise, if the user has already initiated a riddle, they can access their current riddle from that screen. There is a "profile" button which can show the user their profile and all the achievements they have gained. Additionally, there is a "settings" button which takes the user to a page that has all the settings that can be modified to change the game mechanics.
 
-When the user is asked to select a location, they are shown a screen which gives them three options: Lab; Lecture or social.
+When the user is asked to select a location, they are shown a screen which gives them three options: Lab, Lecture or Social.
 
 Once the user has selected a riddle, the riddle is shown on screen. The user has a set number of hints and as they use these hints, the riddle changes and becomes easier to solve. The user can then choose to solve the riddle at any point by swiping up from the bottom to open the camera. 
 
-Once the user scans the AR code, the app will inform them if they have been successful and scanned the correct location. The app will also inform them if they have levelled up and any free offers they have unlocked.
+Once the user scans the AR code, the app will inform them if they have been successful and scanned the correct location. The app will also inform them if they have levelled-up and any free offers they have unlocked.
 
 \subsection*{Prototype 4}
-This prototype also focussed heavily on maintaining a minimilistic design. This prototype uses many different screens to display information. 
+This prototype also focussed heavily on maintaining a minimalistic design. This prototype uses many different screens to display information. 
 
 The prototype has an initial start screen with a button to continue to the login screen. This login screen has an option to remember the user. Once the user logs in, if this is their first time using the app, they are displayed with a personality quiz. Otherwise, the main screen is shown.
 
@@ -169,11 +184,11 @@ The profile can be accessed through the settings menu. This profile will display
 
 \subsection*{Prototype 5}
 
-The final prototype suggested had a similar structure to the previous prototypes. A minimalistic design was implemented for the initial use of the app. The user would be greeted with two buttons; one to sign up and one to log in. When the user has signed in for the first time they will be greeted with a quiz.
+The final prototype suggested had a similar structure to the previous prototypes. A minimalistic design was implemented for the initial use of the app. The user would be greeted with two buttons; one to sign up and one to log in. When the user signs in for the first time they will be greeted with a quiz.
 
 After they complete this quiz, they will be greeted with the main view of the app. This consists of a main map view with several buttons at the top and bottom of the screen. The buttons at the top of the screen will give the user the option to select a lab, lecture or social based riddle. The user will not be limited to one riddle at a time to allow them to revisit riddles that they can not currently solve. The key points will be highlighted on the map as starts.
 
-The bottom part of the screen will swipe up to reveal a navigation drawer. This drawer will contain buttons that can be used to navigate to the other parts of the application. For example, a hints button will give them tips for the current riddle. A camera button will be visible which allows the user to scan an AR code. This AR code will signify the user completing the riddle. Additionally, if the user scans an incorrect AR code, they will be given the option to claim the reward anyway or leave and come back. Another button could be visible which shows the user their currently available offers. The user will also be able to access their profile from this navigation bar. Their profile will show their name, icon and their current skill levels.
+The bottom part of the screen can be swiped up to reveal a navigation drawer. This drawer will contain buttons that can be used to navigate to the other parts of the application. For example, a hints button will give them tips for the current riddle. A camera button will be visible which allows the user to scan an AR code. This AR code will signify the user completing the riddle. Additionally, if the user scans an incorrect AR code, they will be given the option to claim the reward anyway or leave and come back. Another button could be visible which shows the user their currently available offers. The user will also be able to access their profile and friends from this navigation bar. Their profile will show their name, icon and their current skill levels.
 
 \subsection*{Testing the Prototypes}
 Each of these paper prototypes were evaluated within the team. These ideas were discussed and the good and the bad interactions were noted for the refined prototype.
@@ -190,7 +205,7 @@ A overall goal of the application is to not discourage users from continuing to 
 
 The application should encourage individual users to use the application with their friends. Several features to encourage this include the ability to add friends via a QR code. Riddles can be included that require the QR code of another user to be scanned. Random gifts could be given that can only be sent to friends.
 
-It is important that the user is not frustrated when they are unable to solve a riddle and can not get stuck in the same position. Ideas to counteract this include: providing various different riddles that can be swapped between at the same time; providing hints to the user that will eventually give the direct path to the intended destination and providing the user with the ability to scan AR codes without knowing the associated riddle (incase they accidentally scan the wrong code). Additionally, if the user does scan the wrong associated code, they should be given the option to 'cancel' their decision so that they can try to find the right code again.
+It is important that the user is not frustrated when they are unable to solve a riddle and can not get stuck in the same position. Ideas to counteract this include: providing various different riddles that can be swapped between at the same time; providing hints to the user that will eventually give the direct path to the intended destination and providing the user with the ability to scan AR codes without knowing the associated riddle (in case they accidentally scan the wrong code). Additionally, if the user does scan the wrong associated code, they should be given the option to 'cancel' their decision so that they can try to find the right code again.
 
 This generalised feedback can be summarised into the following list of good and bad points generated from the evaluation.
 
@@ -198,7 +213,7 @@ This generalised feedback can be summarised into the following list of good and 
 \begin{itemize}[noitemsep]
   \item Keep the design simple
   \item Allow the user to always be able to access the main map
-  \item Keep a navigation bar accessable at the bottom of the screen with intuitive buttons
+  \item Keep a navigation bar accessible at the bottom of the screen with intuitive buttons
   \item Give the user access to always visit locations regardless of their current riddle state
   \item Reward the user for visiting locations regardless if they solved the riddle or note
   \item Provide a motive to the user to solve the riddles, such as extra experience points
@@ -221,25 +236,6 @@ This generalised feedback can be summarised into the following list of good and 
   \item Do not make the initial quiz too detailed as this may confuse users
   \item Do not create too many layers of sub-menus that would cause the user to get "lost"
 \end{itemize}
-
-% ------------------------------------
-
-
-\subsection*{Design Definitions for Refined Prototype} 
-
-When the application opens, it should show a splash screen. Various interactions were suggested such as a screen that requires a button or finger press to go away. It was decided, however, that a splash screen should be shown that disappears after a few seconds. This allows the user to see that they have entered the right application, but not intrude the users view of the app.
-
-When the application has started, the user will be presented with a login screen. This screen will have a button to log-in to an existing user account or sign-up with a new account. This screen should remain fairly simple, with perhaps only the logo of the application and the application name in addition to this.
-
-The map should be the main focus of the screen. The user should always be able to see where they are in location to a map screen. If other screens were needed to convey information, the user should always be able to easily return to the base map screen.
-
-Swipe motions that were near the edges of the screen were avoided. This is because new smart phones use gesture based navigation. Users would accidentally use the gesture based navigation of their smart phone instead of the application.
-
-A overall goal of the application is to not discourage users from continuing to use the app. If the user goes to the wrong location, they should still be rewarded for exploring, but informed that they have reached the wrong destination.
-
-The application should encourage individual users to use the application with their friends. Several features to encourage this include the ability to add friends via a QR code. Riddles can be included that require the QR code of another user to be scanned. Random gifts could be given that can only be sent to friends.
-
-It is important that the user is not frustrated when they are unable to solve a riddle and can not get stuck in the same position. Ideas to counteract this include: providing various different riddles that can be swapped between at the same time; providing hints to the user that will eventually give the direct path to the intended destination and providing the user with the ability to scan AR codes without knowing the associated riddle (incase they accidentally scan the wrong code). Additionally, if the user does scan the wrong associated code, they should be given the option to 'cancel' their decision so that they can try to find the right code again.
 
 % ------------------------------------
 \section*{Refined Prototyping}
@@ -333,7 +329,7 @@ Additionally, some potential improvements have been identified that need to be e
 % ------------------------------------
 \section*{Demonstrator Prototype}
 
-After recieving feedback from the refined prototype, a demonstrator prototype was created to show the implementation of the main design features within an application. This demonstrator prototype is created for Android devices and is created using "Android Studio". The application is created using Java. The application was developed for Android 9/Pie (API level 28).
+After receiving feedback from the refined prototype, a demonstrator prototype was created to show the implementation of the main design features within an application. This demonstrator prototype is created for Android devices and is created using "Android Studio". The application is created using Java. The application was developed for Android 9/Pie (API level 28).
 
 This demonstrator prototype was developed by incorporating the feedback received from the previous prototypes. This prototype will give users a more realistic interpretation of what the final application will look like. This demonstrator prototype is not intended to be a final product, but will feature the main interactions, features and general design that the application will have.
 
@@ -343,11 +339,11 @@ When the user first launches the application, they are greeted with a splash scr
 
 The main view of the app contains a central map. There are three buttons located at the top of the screen: "Lab"; "Lecture" and "Social". This is accompanied by four icons at the bottom: "Home";  "Scan"; "Offers" and "Account". Clicking one of the three buttons at the top of the screen will scroll down a riddle associated with that button.
 
-Clicking on the "Scan" button will open up a fullscreen scanner. If they scan the right code, they will recieve a pop-up congratulating them and will let them claim their prize. If they scan a valid code which is not the answer to the riddle, the pop-up informs them of this and offers them to leave the reward and come back when they have the associated riddle active.
+Clicking on the "Scan" button will open up a full screen scanner. If they scan the right code, they will receive a pop-up congratulating them and will let them claim their prize. If they scan a valid code which is not the answer to the riddle, the pop-up informs them of this and offers them to leave the reward and come back when they have the associated riddle active.
 
 Opening the offers screen shows the user the current offers they have unlocked, such as a free coffee. The user can swipe the screen left and right to swap between available offers.
 
-If the user selects the account option, they will be shown their user profile. This screen includes the username and profile picture of the user. The current level of the user is displayed and a progress bar for their XP can be seen. There are four buttons on this screen: "Friends"; "Badges"; "Settings" and "Logout".
+If the user selects the account option, they will be shown their user profile. This screen includes the user name and profile picture of the user. The current level of the user is displayed and a progress bar for their XP can be seen. There are four buttons on this screen: "Friends"; "Badges"; "Settings" and "Logout".
 
 Clicking "Friends" shows a list of all of the friends a user has added. Their levels, names and icons are displayed. The user also has an option to add new friends with a button. Clicking the "Badges" button will show the user a list of badges they have unlocked. If the user clicks a specific badge, it will display more information about the badge in a pop-up notification. Clicking "Logout" will return the user to the log-in screen.
 
@@ -361,12 +357,12 @@ The following feedback was received from the demonstrator prototype:
  \item The buttons are not self-explanatory and it is not obvious what their purposes are
  \item When a riddle is open, pressing the associated button does not close it and it can be confusing to remember which riddle is active
  \item It is not explained clearly as to where your rewards have went
- \item After clicking on a point of interest, reeclicking on the same point of interest does nothing
+ \item After clicking on a point of interest, re-clicking on the same point of interest does nothing
  \item It is not obvious as to how to use the scrolling interactions such as those for hiding the riddles and accessing hints
  \item The font used for the riddles can be hard to read
 \end{itemize}
 
-It is recomended then that, based on the provided feedback, if this application was to be developed into a final product, the following improvements should be made in a future revision:
+It is recommended then that, based on the provided feedback, if this application was to be developed into a final product, the following improvements should be made in a future revision:
 \begin{itemize}[noitemsep]
  \item Create some sort of step-by-step tutorials explaining the purpose of the app and how to use its features such as the riddles
  \item Explain to the user the purpose of each button and their purpose
@@ -379,13 +375,13 @@ It is recomended then that, based on the provided feedback, if this application 
 \section*{Overall Discussion}
 Within this application, there were several changes made at different stages of the design. There was, however, an overall structure that was carried throughout the stages of design including the key features and interactions of the design that was felt to be important to the experience of the user.
 
-The focus of the application was always to create a non-linear experience for the end-user. To do this, the idea of an interactive "game" in the form of riddles was a decision that remained throughout the design process. In each stage of the design, positive feedback was constantly received about the approach that was taken within this application. It is reccomended then, that if this application was to be taken to a final product, that the riddles should remain a key feature for the user's experience.
+The focus of the application was always to create a non-linear experience for the end-user. To do this, the idea of an interactive "game" in the form of riddles was a decision that remained throughout the design process. In each stage of the design, positive feedback was constantly received about the approach that was taken within this application. It is recommended then, that if this application was to be taken to a final product, that the riddles should remain a key feature for the user's experience.
 
 Another key focus of the application was to encourage users to interact with their environment, rather than sit and stare at their phones for long periods of time. In an attempt to do this, the application retained the idea of scanning QR or AR codes at the destinations to encourage people to explore their surroundings to try and find them. The feedback on this was fairly neutral at each design stage, and it did not seem that this design aspect was important to other users. However, it is still insisted that an interaction similar to this should remain in any final application as there needs to be some way to encourage users to explore their environment. This could be developed further into more interactive elements on buildings.
 
 When students are new to the university, it is expected that many of them will not have many friends, if any at all. Therefore, a key design aspect was implementing features that encouraged users to interact with other users of the app. In this application, the concept of adding friends was consistent through all stages of the design. The testing stages showed that the response to this feature was fairly neutral. It is good to implement "friend" features in a final application, however, it is suggested that more is added in the final application to encourage users to interact with their friends, such as gifts that can only be forwarded to other users.
 
-It was veiwed as important to retain some sort of experience system and gift system to encourage users to remain on the application. There was a concern that, when users are confused with a riddle, that they may become frustrated and close the application. It was seen as important to reward the user for finding locations, whether they be the desired 'correct' location or just a location they accidentally found. The purpose of the application is to explore the campus and not neccessarily to be able to solve the riddles correctly, but extra rewards should be supplied for those who do solve the riddles to encourage the users to continue with them. The testers commented that having a gifting and rewarding system was important to keep users motivated. It is recommended that this key interaction should remain within any final application as it is easy for users to lose interest.
+It was viewed as important to retain some sort of experience system and gift system to encourage users to remain on the application. There was a concern that, when users are confused with a riddle, that they may become frustrated and close the application. It was seen as important to reward the user for finding locations, whether they be the desired 'correct' location or just a location they accidentally found. The purpose of the application is to explore the campus and not necessarily to be able to solve the riddles correctly, but extra rewards should be supplied for those who do solve the riddles to encourage the users to continue with them. The testers commented that having a gifting and rewarding system was important to keep users motivated. It is recommended that this key interaction should remain within any final application as it is easy for users to lose interest.
 
 \section*{Conclusion}
 An android application was developed which aims to provide a better method for communicating to new students of the University of Glasgow about the many resources available for them.
@@ -393,6 +389,7 @@ An android application was developed which aims to provide a better method for c
 This application was developed by creating several different prototypes that were evaluated with various users at different stages of the design cycle. The feedback for each stage was used to modify the application for the next stage of testing. 
 
 Overall, this application is a success. It provides an innovative, new way for users to explore the campus and learn about the different points of interest in the university. There is, however, always room for improvement and several changes have been suggested that could be implemented should this application design be taken further into a final product.
+
 
 % ------------------------------------
 \onecolumn
